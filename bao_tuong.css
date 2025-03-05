@@ -1,0 +1,293 @@
+/*import font chữ*/
+@font-face {
+  font-family: 'patriot'; src: url('font/Patriot-Bold.otf') format('opentype');}
+@font-face {
+  font-family: 'westwest'; src: url('font/westwest.otf') format('opentype');}
+@font-face {
+  font-family: 'playfair_display'; src: url('font/playfair_display.ttf') format('truetype');}
+
+/*định dạng phần tử body*/
+body {
+	color: white;						/*màu chữ: trắng*/
+	margin: 0;							/*cách lề: 0*/
+	padding: 0;							/*khoảng cách vùng đệm: 0*/
+	background: url('image/bg.jpg');	/*import hình nền trang web*/
+	background-size: contain;			/*kích cỡ hình nền*/
+	}
+
+/*định dạng phần tử section*/
+section {
+	padding: 50px;		/*vùng đệm cho section*/
+}
+
+/*định dạng phần tử h2*/
+h2 {
+	font-size: 40px;					/*kích cỡ chữ*/
+	text-transform: uppercase;			/*in hoa*/
+	text-align: center;					/*căn giữa*/
+	font-family: 'westwest';			/*font chữ*/
+	font-weight: normal;				/*định dạng chữ thường, không in đậm*/
+}
+
+/*định dạng phần tử h3*/
+h3 {
+	font-size: 20px;					/*kích cỡ chữ*/
+	text-align: center;					/*căn giữa*/
+	text-transform: uppercase;			/*in hoa*/
+	color: lightgrey;					/*màu chữ*/
+	font-family: 'playfair_display';	/*font chữ*/
+}
+
+/*định dạng phần tử p*/
+p {
+	font-size: 18px;					/*kích cỡ chữ*/
+	line-height: 1.5;					/*khoảng cách dòng*/
+	font-family: 'playfair_display';	/*font chữ*/
+}
+
+/*định dạng phần tử header*/
+header {
+	text-align: center; 				/*căn giữa*/
+	padding: 100px 20px;				/*kích thước vùng đệm*/
+	background: url('image/bg3.jpg');	/*hình nền vùng header*/
+	background-size: 100% 100%;			/*kích thước hình nền*/
+}
+/*định dạng phần tử h1 trong header*/
+header h1 {
+	font-size: 100px;					/*kích cỡ chữ*/
+	font-family: 'patriot';				/*font chữ*/
+	text-transform: uppercase;			/*in hoa*/
+	text-align: center;					/*căn giữa*/
+}
+/*định dạng phần tử h3 trong header*/
+header h3 {
+	font-size: 20px;					/*kích cỡ chữ*/
+	font-family: 'westwest';			/*font chữ*/
+	font-weight: normal;				/*định dạng chữ thường, không in đậm*/
+}
+
+/*định dạng bộ chọn lớp .event*/
+.event {
+	display: flex;						/*tự điều chỉnh về chiều ngang, dọc --> bật mode flexbox*/
+	align-items: center;				/*căn chỉnh theo trục dọc, căn giữa*/
+	justify-content: space-between;		/*căn chỉnh theo trục ngang, được đặt cách xa nhau với khoảng trống đều*/
+	padding: 50px;						/*khoảng cách vùng đệm*/
+	border-bottom: 2px solid black;		/*viền bottom*/
+}
+/*định dạng bộ chọn lớp .event1*/
+.event1 {
+	border-bottom: 2px solid black;		/*viền bottom*/
+}
+
+/*định dạng phần tử nav*/
+nav {
+	display: flex; 						/*tự điều chỉnh về chiều ngang, dọc --> bật mode flexbox*/
+	justify-content: center; 			/*căn giữa các phần tử con theo chiều ngang*/
+	gap: 30px; 							/*khoảng cách giữa các phần tử con*/
+	margin: 20px 0;						/*khoảng cách lề*/
+}
+/*định dạng phần tử a của nav*/
+nav a {
+	text-decoration: none; 				/*bỏ dấu gạch chân của link*/
+	color: lightgrey;					/*màu chữ*/
+	font-size: 17px;					/*kích cỡ chữ*/
+	font-family: 'westwest';			/*font chữ*/
+	text-transform: uppercase;			/*in hoa*/
+	border-bottom: 2px solid transparent; /*viền bottom, dày 2px, dạng nét liền, màu trong suốt*/
+	padding-bottom: 4px;				/*vùng đệm bottom*/
+}
+nav a:hover { 							/*áp dụng khi di chuột vào*/
+	border-bottom: 2px solid white;		/*viền bottom*/
+	color: white;						/*màu chữ*/
+}
+
+/*định dạng bộ chọn lớp .thut_lui*/
+.thut_lui {
+	text-indent: 30px;					/*thụt lùi*/
+}
+
+/*định dạng bộ chọn lớp .thut_lui1*/
+.thut_lui1 {
+	text-indent: 50px;					/*thụt lùi*/
+}
+
+/*định dạng bộ chọn lớp .can_giua*/
+.can_giua {
+	text-align: center;					/*căn giữa*/
+	color: white;						/*màu chữ*/
+}
+
+/*định dạng bộ chọn lớp .image*/
+.image {
+	position: relative;					/*thiết lập vị trí so với vị trí ban đầu*/
+	text-align: right;					/*căn phải*/
+	max-width: 45%; 					/*ko đc rộng quá 45% phần tử chứa nó*/
+	margin-left: 50px;					/*căn lề trái*/
+}
+.image img {
+	width: 500px;						/*chiều ngang*/
+	height: auto;						/*chiều cao*/
+	border-radius: 20px;				/*bo góc*/
+	filter: grayscale(80%) brightness(70%);	/*bộ lọc hình*/
+	transition: transform 0.5s ease, filter 0.5s ease; /*Khi phần tử thay đổi (xoay, phóng to, di chuyển...), hiệu ứng sẽ kéo dài 0.5 giây, ease là kiểu chuyển động bắt đầu chậm, nhanh dần ở giữa, và chậm lại khi kết thúc.*/
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7); /*tạo độ bóng, sang phải 5px, xuống dưới 5px, độ mờ 20px, màu bóng*/
+}
+.image img:hover {						/*áp dụng khi di chuột vào*/
+	filter: grayscale(0%) brightness(70%);
+	transform: scale(1.5) rotate(-2deg); /*phóng to phần tử lên 1,5 lần, quay ngược chiều kim đồng hồ 2 độ*/
+}
+
+/*định dạng bộ chọn lớp .image1*/
+.image1 {
+	position: relative;
+	text-align: left;
+	max-width: 45%;
+	margin-right: 50px;
+}
+.image1 img {
+	width: 500px;
+	height: auto;
+	border-radius: 20px;
+	filter: grayscale(80%) brightness(70%);
+	transition: transform 0.5s ease, filter 0.5s ease;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+}
+.image1 img:hover {
+	filter: grayscale(0%) brightness(70%);
+	transform: scale(1.5) rotate(-2deg);
+}
+
+/*định dạng bộ chọn lớp .image2*/
+.image2 {
+	text-align: center;
+}
+.image2 img {
+	width: 1000px;
+	height: auto;
+	filter: grayscale(80%) brightness(70%);
+	transition: transform 0.5s ease, filter 0.5s ease;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+}
+.image2 img:hover {
+	filter: grayscale(0%) brightness(70%);
+	transform: scale(1.2);
+}
+
+/*định dạng bộ chọn lớp .hero*/
+.hero {
+    text-align: left;
+}
+
+/*định dạng bộ chọn lớp .video*/
+.video {
+	width: 100px
+	height: auto;
+	text-align: center;
+}
+
+/*định dạng bộ chọn lớp .container*/
+.container {
+    display: flex;				/*cho phép tự động xuống dòng nếu không đủ không gian trên một hàng*/
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/*định dạng bộ chọn lớp .hero1*/
+.hero1 {
+    width: 1000px;
+    height: auto;
+    text-align: center;
+    }
+.hero1 img {
+    width: 250px;
+    border-radius: 10px;
+    height: 300px;
+	transition: transform 0.5s ease, filter 0.5s ease;
+	filter: grayscale(80%) brightness(70%);
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+    }
+.hero1 img:hover {
+	transform: scale(1.5) rotate(-2deg);
+	filter: grayscale(0%) brightness(70%);
+	}
+.hero1 h3 {
+    margin: 5px 0 5px;
+	font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+   	}
+.hero1 p {
+    font-size: 16px;
+    color: white;
+    line-height: 1.4;
+    text-align: left;
+    }
+
+/*tạo animation, từ sáng chập chòe màu đen --> sáng mạnh, lặp lại đi lặp lại vô hạn*/
+@keyframes neon-glow {
+    0% { text-shadow: 0 0 5px black, 0 0 10px black; }
+    50% { text-shadow: 0 0 20px black, 0 0 40px black; }
+    100% { text-shadow: 0 0 5px black, 0 0 10px black; }
+} 
+h1, header h3, nav {
+    animation: neon-glow 2s infinite alternate;
+}
+
+/*tạo animation, từ sáng chập chòe màu trắng --> sáng mạnh, lặp lại đi lặp lại vô hạn*/
+@keyframes neon-glow1 {
+    0% { text-shadow: 0 0 5px white, 0 0 10px white; }
+    50% { text-shadow: 0 0 20px white, 0 0 40px white; }
+    100% { text-shadow: 0 0 5px white, 0 0 10px white; }
+} /*tạo animation, từ sáng chập chòe --> sáng mạnh, lặp lại đi lặp lại vô hạn*/
+h2 {
+    animation: neon-glow1 2s infinite alternate;
+}
+
+/*định dạng phần tử form*/
+form {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    box-sizing: border-box;
+    font-family: 'playfair_display';
+}
+
+/*định dạng phần tử input, textarea*/
+input, textarea {
+	width: 100%;
+    height: 40px;
+	font-family: 'playfair_display';
+    background-color: black; 
+    color: white; 
+    border: 1px solid white; 
+    font-size: 16px;
+    display: block; 		/*hiển thị theo khối*/
+    box-sizing: border-box; 
+	}
+
+/*định dạng phần tử textarea*/
+textarea {
+	height: 150px;
+}
+
+/*định dạng nút submit*/
+input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer; /*đổi từ con trỏ thành ngón tay*/
+}
+input[type="submit"]:hover {
+    background-color: darkred;
+    color: white;
+}
+
+/*định dạng phần tử footer*/
+footer {
+	text-align: center;
+	padding: 20px;
+}

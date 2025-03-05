@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'playfair_display'; src: url('font/playfair_display.ttf') format('truetype');}
+body {
+	color: white;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden; /*ẩn ND tràn ra ngoài theo trục x*/
+	background: url('image/bg.jpg');
+	background-size:cover;
+	font-family: 'playfair_display';
+	}
+
+div {
+	display: flex;
+	flex-direction: column; 
+	justify-content: center; /*căn giữa theo chiều ngang*/
+	align-items: center; /*căn giữa theo chiều dọc*/
+	height: 100vh;
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+@keyframes neon-glow {
+    0% { text-shadow: 0 0 5px darkred, 0 0 10px darkred; }
+    50% { text-shadow: 0 0 20px darkred, 0 0 40px darkred; }
+    100% { text-shadow: 0 0 5px darkred, 0 0 10px darkred; }
+} /*tạo animation, từ sáng chập chòe --> sáng mạnh, lặp lại đi lặp lại vô hạn*/
+
+h1{
+    animation: neon-glow 2s infinite alternate;
+}
